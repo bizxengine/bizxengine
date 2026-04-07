@@ -1,0 +1,32 @@
+{
+  "name": "@bizxengine/mcp",
+  "version": "1.1.0",
+  "description": "MCP server adapter for BizXEngine — exposes memory store, recall, reasoning, and health tools over STDIO",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "bizxengine-mcp": "dist/index.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts"
+  },
+  "keywords": ["mcp", "bizxengine", "memory", "ai"],
+  "author": "BizXEngine",
+  "license": "ISC",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@types/node": "^25.5.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "zod": "^4.3.6"
+  }
+}
