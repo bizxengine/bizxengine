@@ -36,14 +36,11 @@
   <g transform="translate(310, 90)" filter="url(#mGlow)">
     <rect x="0" y="0" width="160" height="140" rx="12" fill="#38BDF8" fill-opacity="0.05" stroke="#38BDF8" stroke-opacity="0.25" stroke-width="1.5"/>
 
-    <!-- Hexagon icon -->
-    <g transform="translate(80, 32)">
-      <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6"/>
-      <circle cx="0" cy="0" r="4" fill="#38BDF8" opacity="0.4"/>
-    </g>
-
-    <text x="80" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="white" opacity="0.9" font-weight="600">BizXEngine</text>
-    <text x="80" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.5" font-weight="400">Shared Memory</text>
+    <!-- Brand wordmark -->
+    <text x="80" y="45" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600">
+      <tspan fill="#38BDF8">Biz</tspan><tspan fill="#ffffff">X</tspan><tspan fill="#999999">Engine</tspan>
+    </text>
+    <text x="80" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.5" font-weight="400">Shared Memory</text>
 
     <!-- Features -->
     <text x="80" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">Learns together</text>
