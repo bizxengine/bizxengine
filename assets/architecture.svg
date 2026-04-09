@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="280" viewBox="0 0 780 280">
+  <defs>
+    <linearGradient id="abg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080808"/>
+      <stop offset="100%" style="stop-color:#0c0c0c"/>
+    </linearGradient>
+    <radialGradient id="aglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.06"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="aBoxGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="6" flood-color="#38BDF8" flood-opacity="0.15"/>
+    </filter>
+    <filter id="aBoxGlowStrong">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#38BDF8" flood-opacity="0.25"/>
+    </filter>
+    <linearGradient id="flowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.1"/>
+      <stop offset="50%" style="stop-color:#38BDF8;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="280" fill="url(#abg)" rx="12"/>
+  <rect width="780" height="280" fill="url(#aglow)" rx="12"/>
+
+  <!-- Border -->
+  <rect x="0.5" y="0.5" width="779" height="279" fill="none" rx="12" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Column 1: AI Tools -->
+  <g transform="translate(40, 55)">
+    <!-- Card -->
+    <rect x="0" y="0" width="160" height="170" rx="10" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    <text x="80" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.35" font-weight="500" letter-spacing="1.5">YOUR AI TOOLS</text>
+
+    <!-- Tool items -->
+    <g transform="translate(20, 46)">
+      <rect width="120" height="24" rx="6" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.06"/>
+      <text x="14" y="16" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">Claude Code</text>
+    </g>
+    <g transform="translate(20, 78)">
+      <rect width="120" height="24" rx="6" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.06"/>
+      <text x="14" y="16" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">Cursor</text>
+    </g>
+    <g transform="translate(20, 110)">
+      <rect width="120" height="24" rx="6" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.06"/>
+      <text x="14" y="16" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.7">Windsurf</text>
+    </g>
+    <g transform="translate(20, 142)">
+      <rect width="120" height="24" rx="6" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.06"/>
+      <text x="14" y="16" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.5">Any MCP Client</text>
+    </g>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g transform="translate(210, 130)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="url(#flowLine)" stroke-width="1.5"/>
+    <polygon points="60,-4 68,0 60,4" fill="#38BDF8" opacity="0.5"/>
+    <text x="34" y="-8" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#38BDF8" opacity="0.4">MCP</text>
+  </g>
+
+  <!-- Column 2: MCP Adapter -->
+  <g transform="translate(290, 75)" filter="url(#aBoxGlow)">
+    <rect x="0" y="0" width="170" height="130" rx="10" fill="#38BDF8" fill-opacity="0.04" stroke="#38BDF8" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="85" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.6" font-weight="500" letter-spacing="1.5">MCP ADAPTER</text>
+    <text x="85" y="48" text-anchor="middle" font-family="monospace" font-size="10" fill="white" opacity="0.4">@bizxengine/mcp</text>
+
+    <!-- Tool icons -->
+    <g transform="translate(18, 62)">
+      <rect width="130" height="20" rx="4" fill="#38BDF8" fill-opacity="0.06"/>
+      <text x="8" y="14" font-family="monospace" font-size="9" fill="#38BDF8" opacity="0.6">brain.remember</text>
+    </g>
+    <g transform="translate(18, 86)">
+      <rect width="130" height="20" rx="4" fill="#38BDF8" fill-opacity="0.06"/>
+      <text x="8" y="14" font-family="monospace" font-size="9" fill="#38BDF8" opacity="0.6">brain.recall</text>
+    </g>
+    <g transform="translate(18, 110)">
+      <rect width="130" height="20" rx="4" fill="#38BDF8" fill-opacity="0.06"/>
+      <text x="8" y="14" font-family="monospace" font-size="9" fill="#38BDF8" opacity="0.6">brain.answer</text>
+    </g>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g transform="translate(470, 130)">
+    <line x1="0" y1="0" x2="60" y2="0" stroke="url(#flowLine)" stroke-width="1.5"/>
+    <polygon points="60,-4 68,0 60,4" fill="#38BDF8" opacity="0.5"/>
+    <text x="34" y="-8" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="#38BDF8" opacity="0.4">HTTPS</text>
+  </g>
+
+  <!-- Column 3: BizXEngine Cloud -->
+  <g transform="translate(550, 40)" filter="url(#aBoxGlowStrong)">
+    <rect x="0" y="0" width="190" height="200" rx="10" fill="#38BDF8" fill-opacity="0.03" stroke="#38BDF8" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="95" y="28" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.7" font-weight="600" letter-spacing="1.5">BIZXENGINE CLOUD</text>
+
+    <!-- Services -->
+    <g transform="translate(15, 44)">
+      <rect width="160" height="28" rx="6" fill="#38BDF8" fill-opacity="0.06" stroke="#38BDF8" stroke-opacity="0.1"/>
+      <text x="14" y="18" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.7">Intelligence API</text>
+    </g>
+    <g transform="translate(15, 78)">
+      <rect width="160" height="28" rx="6" fill="#38BDF8" fill-opacity="0.06" stroke="#38BDF8" stroke-opacity="0.1"/>
+      <text x="14" y="18" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.7">Hybrid Search Engine</text>
+    </g>
+    <g transform="translate(15, 112)">
+      <rect width="160" height="28" rx="6" fill="#38BDF8" fill-opacity="0.06" stroke="#38BDF8" stroke-opacity="0.1"/>
+      <text x="14" y="18" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.7">Memory Optimization</text>
+    </g>
+    <g transform="translate(15, 146)">
+      <rect width="160" height="28" rx="6" fill="#38BDF8" fill-opacity="0.06" stroke="#38BDF8" stroke-opacity="0.1"/>
+      <text x="14" y="18" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.7">Workspace Memory</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="300" viewBox="0 0 780 300">
+  <defs>
+    <linearGradient id="mbg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#080808"/>
+      <stop offset="100%" style="stop-color:#0c0c0c"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0"/>
+    </radialGradient>
+    <filter id="mGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#38BDF8" flood-opacity="0.2"/>
+    </filter>
+    <filter id="agentGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#38BDF8" flood-opacity="0.12"/>
+    </filter>
+    <linearGradient id="mFlowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0.4"/>
+    </linearGradient>
+    <linearGradient id="mFlowLineR" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#38BDF8;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#38BDF8;stop-opacity:0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="780" height="300" fill="url(#mbg)" rx="12"/>
+  <rect width="780" height="300" fill="url(#centerGlow)" rx="12"/>
+  <rect x="0.5" y="0.5" width="779" height="299" fill="none" rx="12" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="390" y="35" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.3" font-weight="500" letter-spacing="2">MULTI-AGENT SHARED INTELLIGENCE</text>
+
+  <!-- Center: BizXEngine Memory Hub -->
+  <g transform="translate(310, 90)" filter="url(#mGlow)">
+    <rect x="0" y="0" width="160" height="140" rx="12" fill="#38BDF8" fill-opacity="0.05" stroke="#38BDF8" stroke-opacity="0.25" stroke-width="1.5"/>
+
+    <!-- Hexagon icon -->
+    <g transform="translate(80, 32)">
+      <polygon points="0,-16 14,-8 14,8 0,16 -14,8 -14,-8" fill="none" stroke="#38BDF8" stroke-width="1.5" opacity="0.6"/>
+      <circle cx="0" cy="0" r="4" fill="#38BDF8" opacity="0.4"/>
+    </g>
+
+    <text x="80" y="65" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="white" opacity="0.9" font-weight="600">BizXEngine</text>
+    <text x="80" y="82" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.5" font-weight="400">Shared Memory</text>
+
+    <!-- Features -->
+    <text x="80" y="105" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">Learns together</text>
+    <text x="80" y="118" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">Improves together</text>
+    <text x="80" y="131" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">Never loses context</text>
+  </g>
+
+  <!-- Agent 1: Research (top-left) -->
+  <g transform="translate(50, 65)" filter="url(#agentGlow)">
+    <rect x="0" y="0" width="170" height="72" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    <circle cx="28" cy="28" r="12" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="28" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.7">R</text>
+    <text x="52" y="28" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.8" font-weight="500">Research Agent</text>
+    <text x="52" y="44" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">stores insights</text>
+    <line x1="20" y1="58" x2="150" y2="58" stroke="white" stroke-opacity="0.04"/>
+    <text x="85" y="68" text-anchor="middle" font-family="monospace" font-size="8" fill="#38BDF8" opacity="0.3">brain.remember</text>
+  </g>
+
+  <!-- Agent 2: Copywriting (bottom-left) -->
+  <g transform="translate(50, 175)" filter="url(#agentGlow)">
+    <rect x="0" y="0" width="170" height="72" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    <circle cx="28" cy="28" r="12" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="28" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.7">C</text>
+    <text x="52" y="28" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.8" font-weight="500">Copy Agent</text>
+    <text x="52" y="44" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">retrieves context</text>
+    <line x1="20" y1="58" x2="150" y2="58" stroke="white" stroke-opacity="0.04"/>
+    <text x="85" y="68" text-anchor="middle" font-family="monospace" font-size="8" fill="#38BDF8" opacity="0.3">brain.recall</text>
+  </g>
+
+  <!-- Agent 3: Strategy (top-right) -->
+  <g transform="translate(560, 65)" filter="url(#agentGlow)">
+    <rect x="0" y="0" width="170" height="72" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    <circle cx="28" cy="28" r="12" fill="#38BDF8" fill-opacity="0.1" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="28" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#38BDF8" opacity="0.7">S</text>
+    <text x="52" y="28" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.8" font-weight="500">Strategy Agent</text>
+    <text x="52" y="44" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.35">reasons over everything</text>
+    <line x1="20" y1="58" x2="150" y2="58" stroke="white" stroke-opacity="0.04"/>
+    <text x="85" y="68" text-anchor="middle" font-family="monospace" font-size="8" fill="#38BDF8" opacity="0.3">brain.answer</text>
+  </g>
+
+  <!-- Agent 4: Custom (bottom-right) -->
+  <g transform="translate(560, 175)" filter="url(#agentGlow)">
+    <rect x="0" y="0" width="170" height="72" rx="8" fill="white" fill-opacity="0.03" stroke="white" stroke-opacity="0.08" stroke-width="1"/>
+    <circle cx="28" cy="28" r="12" fill="white" fill-opacity="0.04" stroke="white" stroke-opacity="0.15" stroke-width="1"/>
+    <text x="28" y="32" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.4">+</text>
+    <text x="52" y="28" font-family="Inter, sans-serif" font-size="11" fill="white" opacity="0.5" font-weight="500">Your Agent</text>
+    <text x="52" y="44" font-family="Inter, sans-serif" font-size="9" fill="white" opacity="0.25">any capability</text>
+    <line x1="20" y1="58" x2="150" y2="58" stroke="white" stroke-opacity="0.04"/>
+    <text x="85" y="68" text-anchor="middle" font-family="monospace" font-size="8" fill="white" opacity="0.15">brain.*</text>
+  </g>
+
+  <!-- Connection lines: Agents to Center -->
+  <!-- Research -> Center -->
+  <line x1="220" y1="100" x2="310" y2="140" stroke="url(#mFlowLine)" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Copy -> Center -->
+  <line x1="220" y1="210" x2="310" y2="180" stroke="url(#mFlowLine)" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Center -> Strategy -->
+  <line x1="470" y1="140" x2="560" y2="100" stroke="url(#mFlowLineR)" stroke-width="1" stroke-dasharray="4,3"/>
+  <!-- Center -> Custom -->
+  <line x1="470" y1="180" x2="560" y2="210" stroke="url(#mFlowLineR)" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Flow dots on lines -->
+  <circle cx="265" cy="120" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="265" cy="195" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="515" cy="120" r="2" fill="#38BDF8" opacity="0.3"/>
+  <circle cx="515" cy="195" r="2" fill="#38BDF8" opacity="0.2"/>
+
+  <!-- Bottom tagline -->
+  <text x="390" y="280" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="white" opacity="0.2" letter-spacing="0.5">One workspace. Every agent. Shared intelligence.</text>
+</svg>
