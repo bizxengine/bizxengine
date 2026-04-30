@@ -466,6 +466,8 @@ OpenClaw's core design is multi-agent. Developers build swarms where one agent p
 
 BizXEngine replaces that with **shared workspace memory**. Every agent in your OpenClaw swarm reads from and writes to the same memory pool — regardless of which machine, channel, or LLM provider they run on. One agent learns something. Every other agent knows it immediately.
 
+> **OpenClaw does not inherit MCP servers from your IDE configs.** Even after `npx @bizxengine/mcp --install` writes `~/.cursor/mcp.json`, `~/.claude/settings.json`, etc., OpenClaw agents will still report `No MCP server named "bizxengine"`. OpenClaw reads only its own `~/.openclaw/openclaw.json` — you must register `bizxengine` there explicitly. A successful `mcporter call 'bizxengine.brain.status()'` proves the MCP adapter works on the machine; it does **not** prove OpenClaw can see it.
+
 **Setup** — add to `~/.openclaw/openclaw.json`:
 
 ```json
@@ -493,6 +495,15 @@ openclaw gateway restart
 **For multi-agent swarms** — use the same workspace key across every agent instance. One key. Shared memory. Every agent in the swarm stays in sync automatically.
 
 > Running per-agent MCP routing in OpenClaw? Add the `bizxengine` server to each agent's `mcpServers` override. Agents without an override inherit the global server list.
+
+**Verify against OpenClaw's runtime** — not just `mcporter`:
+
+```bash
+openclaw mcp list                  # bizxengine must appear
+openclaw mcp show bizxengine       # confirms config in ~/.openclaw/openclaw.json
+```
+
+Then trigger a real tool call *through an OpenClaw agent* — e.g. ask the agent "What is your BizXEngine status?" and confirm it invokes `brain.status` and returns a successful response. If `mcporter` works but `openclaw mcp list` doesn't show `bizxengine`, the OpenClaw config is missing — re-check Step 1 above and run `openclaw gateway restart`.
 
 <br/>
 
